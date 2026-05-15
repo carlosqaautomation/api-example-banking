@@ -1,0 +1,46 @@
+{
+  "type": "object",
+  "required": ["accessToken", "refreshToken", "user"],
+  "properties": {
+    "success": {
+      "type": "boolean"
+    },
+    "data": {
+      "type": "object",
+      "required": ["accessToken", "refreshToken", "user"],
+      "properties": {
+        "accessToken": {
+          "type": "string",
+          "description": "JWT access token"
+        },
+        "refreshToken": {
+          "type": "string",
+          "description": "JWT refresh token"
+        },
+        "user": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "email": {
+              "type": "string",
+              "format": "email"
+            },
+            "fullName": {
+              "type": "string"
+            },
+            "phone": {
+              "type": "string"
+            },
+            "createdAt": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        }
+      }
+    }
+  }
+}

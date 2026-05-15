@@ -1,0 +1,7 @@
+amount,description,expectedStatus,expectedCode
+100,Test transfer,201,
+50,Another test,201,
+0,Zero amount,400,VALIDATION_ERROR
+-50,Negative amount,400,VALIDATION_ERROR
+1000001,Excessive amount,400,VALIDATION_ERROR
+50.50,Decimal amount,201,

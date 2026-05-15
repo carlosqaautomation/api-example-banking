@@ -1,0 +1,7 @@
+email,password,expectedStatus,expectedErrorCode
+test@bankapi.com,password123,200,
+invalid@test.com,wrongpass,401,INVALID_CREDENTIALS
+test@bankapi.com,invalidpass,401,INVALID_CREDENTIALS
+,password123,400,VALIDATION_ERROR
+test@bankapi.com,,400,VALIDATION_ERROR
+invalid-email,password123,400,VALIDATION_ERROR

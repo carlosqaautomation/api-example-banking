@@ -1,0 +1,51 @@
+{
+  "type": "object",
+  "properties": {
+    "success": {
+      "type": "boolean"
+    },
+    "data": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "accountNumber", "accountType", "balance", "currency"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "userId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "accountNumber": {
+            "type": "string",
+            "pattern": "^[0-9]{10}$"
+          },
+          "accountType": {
+            "type": "string",
+            "enum": ["savings", "checking"]
+          },
+          "balance": {
+            "type": "number"
+          },
+          "currency": {
+            "type": "string",
+            "length": 3
+          },
+          "isActive": {
+            "type": "boolean"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      }
+    }
+  }
+}
