@@ -18,7 +18,10 @@ const options = {
 - Validación de schemas`,
       contact: { name: 'QA Team' }
     },
-    servers: [{ url: 'http://localhost:3000', description: 'Development server' }],
+    servers: [
+      { url: 'http://localhost:3000', description: 'Development server' },
+      { url: 'https://bankapi-n1t8.onrender.com', description: 'Production server' }
+    ],
     components: {
       securitySchemes: {
         bearerAuth: { type: 'http', scheme: 'bearer', bearerFormat: 'JWT' }
